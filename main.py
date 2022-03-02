@@ -1,13 +1,10 @@
-import binance
+import yfinance as yf
 
 
 def main():
-    print('''
-___________________________
-|                          |
-|       Just Trade         |
-|__________________________|
-    ''')
+    precios = yf.download('USDCOP=X', period='1d', )
+
+    print(precios)
 
 
 if __name__ == '__main__':
