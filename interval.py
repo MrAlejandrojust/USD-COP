@@ -1,11 +1,10 @@
-import datetime
+"""import datetime
 import sched
 import time
 import threading
 
 
 def repeat_at_interval(scheduler, event, interval=60, add_n=10, start_t=None):
-    """Adds 'add_n' more calls to "event" at each "interval" seconds"""
     # Unix timestamp
     if start_t is None:
         t = time.time()
@@ -30,4 +29,4 @@ def repeat_at_interval(scheduler, event, interval=60, add_n=10, start_t=None):
 
 
 def test():
-    print(datetime.datetime.now())
+    print(datetime.datetime.now())"""
