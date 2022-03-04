@@ -1,1 +1,2 @@
-# JustTrade
+## Requiriments
+- yfinance Library.
