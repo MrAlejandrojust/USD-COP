@@ -1,16 +1,26 @@
 import yfinance as yf
 
+import sched
+import time
+import threading
+
+from interval import repeat_at_interval
+from interval import test
+
 
 def main():
-    while True:
-        prices = yf.download('USDCOP=X', period='1d', )
-        print(prices)
+    try:
+        scheduler = sched.scheduler(time.time, time.sleep)
+        repeat_at_interval(scheduler, test, interval=60)
+        thread = threading.Thread(target=scheduler.run)
+        thread.start()
+        while True:
+            time.sleep(10)
+            usdcop = yf.download('USDCOP=X', period='1d')['Open']
+            print(usdcop)
+    except:
+        print('An internal error has occurred')
 
-    # Enter TRM
-    # TRM = "3,862.95"
-    # diffence = TRM/prices
-    # print(diffence)
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
