@@ -1,20 +1,10 @@
 import yfinance as yf
 
-import sched
-import time
-import threading
 
 from os import system
 
-# from interval import repeat_at_interval
-# from interval import test
-
 
 def main():
-    # scheduler = sched.scheduler(time.time, time.sleep)
-    # repeat_at_interval(scheduler, test, interval=60)
-    # thread = threading.Thread(target=scheduler.run)
-    # thread.start()
     try:
         while True:
             # print('\nPrice is currently loading please wait...')
