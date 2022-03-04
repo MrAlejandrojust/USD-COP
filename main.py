@@ -4,8 +4,8 @@ import sched
 import time
 import threading
 
-from interval import repeat_at_interval
-from interval import test
+# from interval import repeat_at_interval
+# from interval import test
 
 
 def main():
