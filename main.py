@@ -4,6 +4,8 @@ import sched
 import time
 import threading
 
+from os import system
+
 # from interval import repeat_at_interval
 # from interval import test
 
@@ -15,9 +17,15 @@ def main():
     # thread.start()
     try:
         while True:
-            time.sleep(10)
+            # print('\nPrice is currently loading please wait...')
             usdcop = yf.download('USDCOP=X', period='1d')['Open']
-            print(usdcop)
+
+            for k, v in usdcop.items():
+                v = "{0:.2f}".format(v)
+                print('\nCurrent Price:', v)
+
+            time.sleep(10)
+            system("cls")
     except:
         print('\nSuccessfully stopped!')
 
