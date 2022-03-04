@@ -2,9 +2,14 @@ import yfinance as yf
 
 
 def main():
-    precios = yf.download('USDCOP=X', period='1d', )
+    while True:
+        prices = yf.download('USDCOP=X', period='1d', )
+        print(prices)
 
-    print(precios)
+    # Enter TRM
+    # TRM = "3,862.95"
+    # diffence = TRM/prices
+    # print(diffence)
 
 
 if __name__ == '__main__':
